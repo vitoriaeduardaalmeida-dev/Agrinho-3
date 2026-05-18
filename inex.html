@@ -1,0 +1,394 @@
+# Site Modelo para GitHub Pages
+
+## index.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🌱 AgroTech</div>
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#videos">Vídeos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    <button id="modo-btn">🌙</button>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-texto">
+        <h1>Agro Forte, Futuro Sustentável</h1>
+        <p>Equilíbrio entre tecnologia, produção e meio ambiente.</p>
+        <a href="#sobre" class="btn">Explorar</a>
+    </div>
+</section>
+
+<section class="sobre" id="sobre">
+    <h2>Sobre o Projeto</h2>
+    <p>
+        Este site mostra como o agronegócio pode crescer utilizando tecnologia,
+        sustentabilidade e inovação para proteger o planeta.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop" alt="Plantação">
+            <h3>Produção Inteligente</h3>
+            <p>Uso de tecnologia moderna no campo.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop" alt="Sustentabilidade">
+            <h3>Sustentabilidade</h3>
+            <p>Preservação da natureza e dos recursos.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Tecnologia">
+            <h3>Inovação</h3>
+            <p>Drones, sensores e inteligência artificial no agro.</p>
+        </div>
+    </div>
+</section>
+
+<section class="galeria" id="galeria">
+    <h2>Galeria</h2>
+
+    <div class="imagens">
+        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1200&auto=format&fit=crop" alt="Campo">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="Natureza">
+        <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1200&auto=format&fit=crop" alt="Agricultura">
+    </div>
+</section>
+
+<section class="videos" id="videos">
+    <h2>Vídeos</h2>
+
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/2g811Eo7K8U" title="YouTube video" allowfullscreen></iframe>
+
+        <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
+    </div>
+</section>
+
+<section class="contador">
+    <h2>Visitantes</h2>
+    <p id="numero">0</p>
+</section>
+
+<section class="contato" id="contato">
+    <h2>Contato</h2>
+
+    <form>
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu email" required>
+        <textarea placeholder="Digite sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 AgroTech Sustentável</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+```
+
+---
+
+## style.css
+
+```css
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#222;
+    transition:0.4s;
+}
+
+header{
+    background:#1f7a3d;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+#modo-btn{
+    background:white;
+    border:none;
+    padding:10px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.hero{
+    height:90vh;
+    background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1600&auto=format&fit=crop') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-texto{
+    background:rgba(0,0,0,0.5);
+    padding:30px;
+    border-radius:20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.btn{
+    background:#ffd700;
+    color:black;
+    padding:12px 25px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:60px 30px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:38px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+}
+
+.card p{
+    padding:0 15px 20px;
+}
+
+.imagens{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.imagens img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.video-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.video-container iframe{
+    width:100%;
+    height:300px;
+    border:none;
+    border-radius:20px;
+}
+
+.contador{
+    text-align:center;
+    background:#1f7a3d;
+    color:white;
+}
+
+#numero{
+    font-size:60px;
+    margin-top:20px;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#1f7a3d;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.dark{
+    background:#111;
+    color:white;
+}
+
+.dark .card{
+    background:#222;
+    color:white;
+}
+
+.dark input,
+.dark textarea{
+    background:#333;
+    color:white;
+    border:1px solid #666;
+}
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+}
+```
+
+---
+
+## script.js
+
+```javascript
+const botao = document.getElementById('modo-btn');
+
+botao.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+
+    if(document.body.classList.contains('dark')){
+        botao.innerHTML = '☀️';
+    }else{
+        botao.innerHTML = '🌙';
+    }
+});
+
+let numero = 0;
+const contador = document.getElementById('numero');
+
+const intervalo = setInterval(() => {
+    numero++;
+    contador.innerHTML = numero;
+
+    if(numero >= 500){
+        clearInterval(intervalo);
+    }
+}, 10);
+```
+
+---
+
+# Como publicar no GitHub Pages
+
+1. Crie um repositório no GitHub.
+2. Envie os arquivos:
+
+* index.html
+* style.css
+* script.js
+
+3. Vá em:
+   Settings → Pages
+
+4. Em Source escolha:
+   Deploy from a branch
+
+5. Selecione:
+   main → /root
+
+6. Clique em Save.
+
+Seu site ficará online em alguns minutos.
